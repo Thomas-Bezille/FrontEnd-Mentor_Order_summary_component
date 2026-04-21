@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+
+:root {
+  --primary-color: hsl(245, 75%, 52%);
+  --primary-light: hsl(225, 100%, 94%);
+  --light: hsl(225, 100%, 98%);
+  --medium: hsl(224, 23%, 55%);
+  --dark: hsl(223, 47%, 23%);
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 500;
+  min-height: 100vh;
+  background-color: var(--primary-light);
+  background-image: url("./images/pattern-background-mobile.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  color: var(--medium);
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  background: var(--light);
+  margin: 0 1rem;
+  border-radius: 1rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0 1rem 2rem 0.3rem rgba(0, 0, 0, 0.2);
+}
+
+header {
+  width: 100%;
+}
+
+header img {
+  width: 100%;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 900;
+  font-size: 1.7rem;
+  margin: 1.5rem 0;
+  color: black;
+}
+
+.order-description {
+  text-align: center;
+  margin: 0 2.3rem 2.5rem;
+}
+
+.payment-plan {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.payment-plan .price h2 {
+  font-size: 1rem;
+  color: black;
+  font-weight: 700;
+}
+
+.payment-plan .price p,
+.payment-plan .price h2 {
+  margin: 0 0 0 -1rem;
+}
+
+.payment-plan a {
+  font-weight: 700;
+  color: var(--primary-color);
+  transition: color 0.2s ease-in-out;
+}
+
+.payment-plan a:hover {
+  color: var(--medium);
+}
+
+.btn {
+  display: block;
+  width: 80%;
+  margin: 1rem auto;
+  padding: 1rem 0;
+  background: red;
+  text-align: center;
+  font-weight: 900;
+  text-decoration: none;
+  border-radius: 0.8rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn:last-child {
+  margin-bottom: 2rem;
+  background: none;
+  color: var(--medium);
+}
+
+.btn:last-child:hover {
+  color: var(--dark);
+}
+
+.payment-btn {
+  background: var(--primary-color);
+  color: var(--light);
+  margin-top: 2.5rem;
+  box-shadow: 0 1rem 2rem 0.3rem rgba(0, 0, 0, 0.2);
+}
+
+.payment-btn:hover {
+  background: var(--medium);
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 375px) {
+  .container {
+    max-width: 450px;
+  }
+}
+
+@media screen and (min-width: 790px) {
+  body {
+    background-image: url("./images/pattern-background-desktop.svg");
+  }
+}
